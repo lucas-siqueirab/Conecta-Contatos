@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/modal.css">
+    <title>ConectaContatos</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1 class="logo">Conecta<span>Contatos</span></h1>
+            <input id="pesquisar" type="text" placeholder="Pesquisar contato...">
+            <div class="cta">
+                <strong id="cont-contatos">1 contato</strong>
+                <button onclick="abrirModalCriar()">Novo Contato</button>
+            </div>
+            <div class="divisor"></div>
+            <section>
+                <div>
+                    <button id="sort" onclick='organizarContatos()'>
+                        <img id="seta" src="./assets/voltar.svg">
+                        Nome
+                    </button>
+                    <div id="contatos-wrapper"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div id="modal-container" class="oculto">
+        <div id="modal">
+            <h1 class="logo">Conecta<span>Contatos</span></h1>
+            <button class="voltar" onclick="fecharModal()"><img src="assets/voltar.svg" alt="">Voltar</button>
+            <h2 id="title-modal">Criar contato</h2>
+            <div class="divisor"></div>
+            <div id="form-modal">
+                <form id="form" action="">
+                    <input id="nome" type="text" placeholder="Nome">
+                    <input id="email" type="text" placeholder="E-mail">
+                    <input id="fone" type="number" placeholder="Telefone">
+                    <select id="badge">
+                        <option disabled selected>Categoria</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="discord">Discord</option>
+                        <option value="colegio">Colégio</option>
+                    </select>
+                    <button id='action' class="cta-form" type="submit">Criar contato</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

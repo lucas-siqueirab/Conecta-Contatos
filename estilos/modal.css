@@ -1,0 +1,93 @@
+:root {
+    --cor-principal: #00913d;
+    --cor-principal-hover: #007f3d;
+    --cor-texto: #222;
+    --cor-detalhe: #c4c4c4;
+    --cor-fundo: #e8eee6;
+    --texto-insignia: #ce246d;
+    --fundo-insignia: #ce246d30;
+    --texto-secundario: #888;
+}
+
+#modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #22222290;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px;
+}
+
+#modal {
+    background: var(--cor-fundo);
+    padding: 32px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.voltar {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-principal);
+    gap: 16px;
+    margin: 16 0 16 0;
+}
+
+.voltar:hover {
+    cursor: pointer;
+}
+
+#form-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+#modal input,
+#modal select {
+    padding: 16px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+#modal input::placeholder{
+    font-size: 16px;
+}
+
+#modal .cta-form {
+    background: var(--cor-principal);
+    padding: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    transition: all ease-in-out .5s;
+}
+
+#modal .cta-form:hover {
+    background: var(--cor-principal-hover);
+    cursor: pointer;
+}
+
+#modal-container.oculto {
+    display: none;
+    visibility: hidden;
+}
